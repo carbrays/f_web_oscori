@@ -1,0 +1,454 @@
+/* Google Fonts - Outfit for modern look */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Font Awesome & PrimeIcons for vector icons */
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import 'primeicons/primeicons.css';
+@import 'leaflet/dist/leaflet.css';
+
+/* Bootstrap 5 SCSS */
+@import 'bootstrap/scss/bootstrap';
+
+
+/* Design System - Custom Variables */
+:root {
+  --font-family: 'Outfit', sans-serif;
+  --bg-primary: #111827;       /* Negro Grafito */
+  --bg-secondary: #071E3D;     /* Azul Profundo */
+  --bg-card: rgba(7, 30, 61, 0.55);
+  --bg-card-hover: rgba(7, 30, 61, 0.85);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-hover: rgba(0, 184, 255, 0.25);
+  
+  /* Technology & Neon Colors */
+  --brand-blue: #005BFF;       /* Azul Tecnológico */
+  --brand-blue-glow: rgba(0, 91, 255, 0.4);
+  --neon-blue: #00B8FF;        /* Celeste Brillante */
+  --neon-blue-glow: rgba(0, 184, 255, 0.4);
+  
+  /* Fallback aliases to preserve existing CSS class names while transforming colors */
+  --neon-orange: #005BFF;      /* Mapped to Azul Tecnológico */
+  --neon-orange-glow: rgba(0, 91, 255, 0.4);
+  
+  /* Light colors */
+  --white: #FFFFFF;
+  --gray-light: #F4F7FA;
+  
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #E2E8F0;
+  --text-muted: #94A3B8;
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* Base resets and defaults */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  &::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(255, 107, 0, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(0, 240, 255, 0.05) 0%, transparent 40%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 5px;
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-orange);
+  box-shadow: 0 0 10px var(--neon-orange-glow);
+}
+
+/* Selection */
+::selection {
+  background: var(--neon-orange);
+  color: white;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: var(--transition-smooth);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: var(--transition-smooth);
+  overflow: hidden;
+  
+  &:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-glass-hover);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px 0 rgba(0, 240, 255, 0.1);
+  }
+}
+
+/* Neon Text & Border Glows */
+.text-neon-orange {
+  color: var(--neon-orange);
+  text-shadow: 0 0 8px var(--neon-orange-glow);
+}
+
+.text-neon-blue {
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px var(--neon-blue-glow);
+}
+
+.border-neon-orange {
+  border: 1px solid var(--neon-orange) !important;
+  box-shadow: 0 0 15px var(--neon-orange-glow);
+}
+
+.border-neon-blue {
+  border: 1px solid var(--neon-blue) !important;
+  box-shadow: 0 0 15px var(--neon-blue-glow);
+}
+
+/* Animated Buttons */
+.btn-neon-orange {
+  background: linear-gradient(135deg, var(--neon-orange) 0%, #ff4b00 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.3);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.6);
+    
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-neon-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid var(--border-glass);
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(5px);
+
+  &:hover {
+    border-color: var(--neon-blue);
+    background: rgba(0, 240, 255, 0.05);
+    box-shadow: 0 0 15px var(--neon-blue-glow);
+    transform: translateY(-3px);
+    color: var(--neon-blue);
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+/* Scroll Reveal and GSAP target placeholders */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+/* General Layout utilities */
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  color: var(--neon-orange);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* Custom 3D Tilt Card Container */
+.tilt-card-wrap {
+  perspective: 1000px;
+}
+
+/* Custom Particle Background styling */
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Leaflet map custom styling (Dark High-Tech Filter) */
+.leaflet-container {
+  background: var(--bg-primary) !important;
+  font-family: var(--font-family) !important;
+  border-radius: 16px;
+  border: 1px solid var(--border-glass) !important;
+}
+
+.leaflet-tile-container img {
+  filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(95%) !important;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: rgba(7, 30, 61, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(0, 184, 255, 0.3) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-popup-close-button {
+  color: #fff !important;
+}
+
+/* Infinite logos carousel */
+.logo-marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.logo-marquee-track {
+  display: inline-flex;
+  gap: 6rem;
+  animation: marquee 30s linear infinite;
+  
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-logo {
+  height: 50px;
+  width: auto;
+  max-width: 140px;
+  filter: grayscale(1) brightness(1.5) opacity(0.5);
+  transition: var(--transition-smooth);
+  object-fit: contain;
+  
+  &:hover {
+    filter: grayscale(0) brightness(1) opacity(1) drop-shadow(0 0 12px var(--neon-blue-glow));
+    transform: scale(1.15);
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Scroll Storytelling path tracker styling */
+.scroll-truck-timeline {
+  position: fixed;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  padding: 10px;
+  background: rgba(17, 24, 39, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-truck-line {
+  width: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.scroll-truck-progress {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to bottom, var(--brand-blue), var(--neon-blue));
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+.scroll-truck-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: var(--neon-blue);
+  filter: drop-shadow(0 0 8px var(--neon-blue));
+  font-size: 1.2rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scroll-truck-dots-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.scroll-truck-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--text-muted);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-smooth);
+  
+  &::after {
+    content: attr(data-label);
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+    background: rgba(7, 30, 61, 0.9);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-glass);
+  }
+  
+  &:hover::after, &.active::after {
+    opacity: 1;
+    right: 20px;
+    color: #fff;
+    border-color: var(--neon-blue);
+  }
+  
+  &.active {
+    background: var(--neon-blue);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+  }
+}
+
+/* Page transitions style */
+.page-transition-wrap {
+  animation: fadeInPage 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
