@@ -452,3 +452,63 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Global Floating WhatsApp widget */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: white;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+  z-index: 999;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(1.1) translateY(-5px);
+    background-color: #20ba5a;
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+    color: white;
+
+    .whatsapp-badge {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.whatsapp-badge {
+  position: absolute;
+  right: 70px;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+@media (max-width: 767.98px) {
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+  }
+}

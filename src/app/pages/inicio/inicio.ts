@@ -29,7 +29,7 @@ import { TrackingComponent } from '../../components/tracking/tracking';
     <!-- Interactive Client Logos Infinite Marquee -->
     <section class="py-5 bg-grafito border-bottom border-glass overflow-hidden">
       <div class="container text-center">
-        <h6 class="text-muted small text-uppercase letter-spacing-2 mb-4">Empresas e Industrias que confían en nosotros</h6>
+        <h6 class="text-neon-blue small text-uppercase letter-spacing-2 mb-4">Empresas e Industrias que confían en nosotros</h6>
         <div class="logo-marquee-container">
           <div class="logo-marquee-track">
             <!-- Double the array to allow infinite seamless scroll -->
