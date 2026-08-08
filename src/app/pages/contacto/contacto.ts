@@ -37,8 +37,8 @@ interface ContactFormModel {
                 
                 <div class="office-box mb-4">
                   <h6 class="text-white fw-bold mb-1"><i class="fa-solid fa-location-dot text-neon-blue me-2"></i>Oficina Central (Bolivia)</h6>
-                  <p class="text-secondary small mb-1">Av. Cristo Redentor, Edificio Torre Duomo, Piso 8. Santa Cruz de la Sierra.</p>
-                  <strong class="text-white small">Telf: +591 3 345 9292</strong>
+                  <p class="text-secondary small mb-1">Av. 6 de Marzo,  Edificio Bella Vista, Piso 3. La Paz.</p>
+                  <strong class="text-white small">Telf: +591 742 630 19</strong>
                 </div>
 
                 <div class="office-box mb-4">
@@ -54,16 +54,16 @@ interface ContactFormModel {
                   <div class="d-flex align-items-center gap-3">
                     <div class="icon-wrap-neon-small"><i class="fa-solid fa-envelope"></i></div>
                     <div>
-                      <span class="text-muted d-block x-small">CORREO ELECTRÓNICO</span>
-                      <strong class="text-white small">contacto&#64;transportes-oscori.com</strong>
+                      <span class="text-neon-blue d-block x-small">CORREO ELECTRÓNICO</span>
+                      <strong class="text-white small">contacto&#64;transportesoscori.com</strong>
                     </div>
                   </div>
                   
                   <div class="d-flex align-items-center gap-3">
                     <div class="icon-wrap-neon-small"><i class="fa-solid fa-phone"></i></div>
                     <div>
-                      <span class="text-muted d-block x-small">CENTRAL DE SOPORTE</span>
-                      <strong class="text-white small">+591 777 000 00</strong>
+                      <span class="text-neon-blue d-block x-small">CENTRAL DE SOPORTE</span>
+                      <strong class="text-white small">+591 742 630 19</strong>
                     </div>
                   </div>
                 </div>
@@ -348,10 +348,10 @@ export class ContactoComponent implements OnInit, AfterViewInit, OnDestroy {
       iconAnchor: [7, 7]
     });
 
-    // Santa Cruz Office Marker
-    L.marker([-17.7833, -63.1821], { icon: customIcon })
+    // La Paz Office Marker
+    L.marker([-16.516689, -68.167166], { icon: customIcon })
       .addTo(this.map)
-      .bindPopup('<strong style="color:#fff;">Santa Cruz (Bolivia)</strong><br><span style="color:#ccc;">Oficina Central</span>');
+      .bindPopup('<strong style="color:#fff;">La Paz (Bolivia)</strong><br><span style="color:#ccc;">Oficina Central</span>');
 
     // Iquique Office Marker
     L.marker([-20.2167, -70.1450], { icon: customIcon })

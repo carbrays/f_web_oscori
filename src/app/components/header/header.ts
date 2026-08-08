@@ -11,12 +11,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <div class="container py-2">
         <a class="navbar-brand d-flex align-items-center" routerLink="/inicio">
           <!-- Stylized truck wheel and wing icon for logo -->
+          <span class="brand-text">
+            <span class="brand-sub">Transportes</span>OSCORI
+          </span>
           <span class="logo-icon me-2">
             <i class="fa-solid fa-truck-fast text-neon-blue"></i>
           </span>
-          <span class="brand-text">
-            OSCORI<span class="brand-sub">Transportes</span>
-          </span>
+          
         </a>
         
         <button 

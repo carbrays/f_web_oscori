@@ -71,7 +71,7 @@ import { TrackingComponent } from '../../components/tracking/tracking';
           </div>
           <div class="col-lg-4 text-center text-lg-end">
             <!-- Redirección al sistema de cotizaciones simulado/existente -->
-            <a href="https://sistema.transportes-oscori.com/cotizaciones" target="_blank" class="btn-neon-orange btn-lg px-5 py-3 d-inline-flex align-items-center">
+            <a href="https://transportesoscori.com/" target="_blank" class="btn-neon-orange btn-lg px-5 py-3 d-inline-flex align-items-center">
               <i class="fa-solid fa-file-invoice-dollar me-2 fs-5"></i> SOLICITAR COTIZACIÓN <i class="fa-solid fa-square-arrow-up-right ms-2 small"></i>
             </a>
           </div>

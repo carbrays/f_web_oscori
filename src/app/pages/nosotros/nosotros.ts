@@ -334,7 +334,7 @@ export class NosotrosComponent implements OnInit {
   selectedMilestoneIdx = signal<number>(0);
 
   milestones: Milestone[] = [
-    { year: '2010', title: 'Fundación en Oruro', description: 'Inicio de operaciones con 2 tractocamiones dedicados al tramo Oruro - Arica.', icon: 'fa-solid fa-truck' },
+    { year: '2010', title: 'Fundación en La Paz', description: 'Inicio de operaciones con 2 tractocamiones dedicados al tramo Oruro - Arica.', icon: 'fa-solid fa-truck' },
     { year: '2015', title: 'Expansión de Flota', description: 'Adquisición de 12 semirremolques modernos y apertura de oficinas en la ciudad de Iquique (Chile).', icon: 'fa-solid fa-warehouse' },
     { year: '2020', title: 'Seguimiento Satelital GPS', description: 'Implementación integral de telemetría y monitoreo preventivo satelital en tiempo real en toda la flota.', icon: 'fa-solid fa-satellite-dish' },
     { year: '2025', title: 'Liderazgo Binacional', description: 'Consolidación de la ruta Santa Cruz - Iquique y reconocimiento por despacho oportuno sin incidencias.', icon: 'fa-solid fa-earth-americas' }

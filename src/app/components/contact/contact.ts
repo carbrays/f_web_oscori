@@ -75,8 +75,8 @@ interface ContactModel {
                 <h5 class="text-white fw-bold mb-3">Nuestras Oficinas</h5>
                 <div class="row g-3">
                   <div class="col-sm-6 text-start">
-                    <h6 class="text-neon-blue fw-bold mb-1"><i class="fa-solid fa-location-dot me-1"></i>Santa Cruz (BO)</h6>
-                    <p class="text-secondary small mb-0">Av. Cristo Redentor, Edificio Torre Duomo, Piso 8.</p>
+                    <h6 class="text-neon-blue fw-bold mb-1"><i class="fa-solid fa-location-dot me-1"></i>La Paz (BO)</h6>
+                    <p class="text-secondary small mb-0">Av. 6 de Marzo,  Edificio Bella Vista, Piso 3.</p>
                   </div>
                   <div class="col-sm-6 text-start">
                     <h6 class="text-neon-blue fw-bold mb-1"><i class="fa-solid fa-location-dot me-1"></i>Iquique (CL)</h6>

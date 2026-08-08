@@ -97,7 +97,7 @@ interface FleetItem {
                 <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
                   <div>
                     <h5 class="text-white fw-bold mb-2">{{ truck.brand }} <span class="text-neon-blue">{{ truck.model }}</span></h5>
-                    <p class="text-muted small mb-4">{{ truck.description }}</p>
+                    <p class="small mb-4">{{ truck.description }}</p>
                   </div>
                   
                   <div class="d-flex justify-content-between pt-3 border-top border-glass text-secondary small">
@@ -273,6 +273,24 @@ export class ServiciosComponent implements OnInit {
       type: 'Tractocamión',
       description: 'Diseño reforzado XT para condiciones extremas de desierto y polvo. Alta eficiencia en torque para pendientes de alta montaña.',
       image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400&auto=format&fit=crop&q=80'
+    },
+    {
+      brand: 'Mercedes-Benz',
+      model: 'Actros 2646',
+      capacity: '42 Toneladas',
+      power: '460 HP',
+      type: 'Tractocamión',
+      description: 'Equipado con telemetría de consumo inteligente. Confort total para viajes de larga distancia y estabilidad aerodinámica superior.',
+      image: 'https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?w=400&auto=format&fit=crop&q=80'
+    },
+    {
+      brand: 'Mercedes-Benz',
+      model: 'Actros 2646',
+      capacity: '42 Toneladas',
+      power: '460 HP',
+      type: 'Tractocamión',
+      description: 'Equipado con telemetría de consumo inteligente. Confort total para viajes de larga distancia y estabilidad aerodinámica superior.',
+      image: 'https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?w=400&auto=format&fit=crop&q=80'
     },
     {
       brand: 'Mercedes-Benz',

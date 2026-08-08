@@ -1,4 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit,ElementRef,
+  ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -17,7 +18,7 @@ interface ReasonItem {
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section id="why-us" class="section-padding position-relative overflow-hidden">
+    <section id="why-us" #whyUsSection class="section-padding position-relative overflow-hidden">
       <!-- Decorative background blur -->
       <div class="glow-bg position-absolute"></div>
       
@@ -125,6 +126,7 @@ interface ReasonItem {
   `]
 })
 export class WhyUsComponent implements AfterViewInit {
+  @ViewChild('whyUsSection') whyUsSection!: ElementRef<HTMLElement>;
   reasons: ReasonItem[] = [
     {
       icon: 'fa-solid fa-shield-halved',
@@ -159,35 +161,61 @@ export class WhyUsComponent implements AfterViewInit {
     {
       icon: 'fa-solid fa-gears',
       title: 'Flota Especializada',
-      desc: 'Tráileres acondicionados para soportar las difíciles carreteras andinas de altura y terrenos áridos chilenos.',
+      desc: 'Tráileres acondicionados para soportar las difíciles carreteras andinas de altura y terrenos áridos chilenos y bolivianos.',
       badge: 'blue'
     }
   ];
 
   ngAfterViewInit() {
-    gsap.from('.why-us-left', {
-      scrollTrigger: {
-        trigger: '#why-us',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      },
+  setTimeout(() => {
+    const section = document.querySelector('#why-us');
+
+    if (!section) return;
+
+    const left = section.querySelector('.why-us-left');
+    const cards = section.querySelectorAll('.why-card');
+
+    // Estado inicial
+    gsap.set(left, {
       x: -60,
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out'
+      opacity: 0
     });
 
-    gsap.from('.why-card', {
+    gsap.set(cards, {
+      y: 30,
+      opacity: 0
+    });
+
+    // Animación izquierda
+    gsap.to(left, {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: 'power3.out',
       scrollTrigger: {
-        trigger: '#why-us',
+        trigger: section,
         start: 'top 80%',
         toggleActions: 'play none none none'
-      },
-      x: 60,
-      opacity: 0,
+      }
+    });
+
+    // Animación tarjetas
+    gsap.to(cards, {
+      y: 0,
+      opacity: 1,
       duration: 0.8,
       stagger: 0.12,
-      ease: 'power3.out'
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      }
     });
-  }
+
+    ScrollTrigger.refresh();
+
+  }, 300);
+}
+  
 }

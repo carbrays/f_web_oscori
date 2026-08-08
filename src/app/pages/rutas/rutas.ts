@@ -41,19 +41,19 @@ import * as L from 'leaflet';
                   <i class="fa-solid fa-arrow-right-arrow-left text-neon-blue mx-2 fs-5"></i> 
                   {{ activeRoute().destination }}
                 </h3>
-                <p class="text-muted small mb-4">{{ activeRoute().description }}</p>
+                <p class="small mb-4">{{ activeRoute().description }}</p>
                 
                 <!-- Quick stats -->
                 <div class="row g-3 mb-4">
                   <div class="col-6">
                     <div class="stat-box p-3 glass-panel border-glass">
-                      <span class="text-muted d-block x-small">DISTANCIA TOTAL</span>
+                      <span class="text-neon-blue d-block x-small">DISTANCIA TOTAL</span>
                       <strong class="text-white fs-5"><i class="fa-solid fa-road text-neon-blue me-2"></i>{{ activeRoute().distance }}</strong>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="stat-box p-3 glass-panel border-glass">
-                      <span class="text-muted d-block x-small">TIEMPO ESTIMADO</span>
+                      <span class="text-neon-blue d-block x-small">TIEMPO ESTIMADO</span>
                       <strong class="text-neon-orange fs-5"><i class="fa-solid fa-clock text-neon-orange me-2"></i>{{ activeRoute().time }}</strong>
                     </div>
                   </div>
@@ -64,7 +64,7 @@ import * as L from 'leaflet';
                   <div class="info-row d-flex gap-3">
                     <div class="icon-wrap-small orange"><i class="fa-solid fa-border-top-left"></i></div>
                     <div>
-                      <span class="text-muted d-block x-small">PASO FRONTERIZO HABILITADO</span>
+                      <span class="text-neon-blue d-block x-small">PASO FRONTERIZO HABILITADO</span>
                       <strong class="text-white small">{{ activeRoute().borderCrossing }}</strong>
                     </div>
                   </div>
@@ -72,7 +72,7 @@ import * as L from 'leaflet';
                   <div class="info-row d-flex gap-3">
                     <div class="icon-wrap-small blue"><i class="fa-solid fa-truck-moving"></i></div>
                     <div>
-                      <span class="text-muted d-block x-small">TIPO DE CARGA</span>
+                      <span class="text-neon-blue d-block x-small">TIPO DE CARGA</span>
                       <strong class="text-white small">{{ activeRoute().cargo }}</strong>
                     </div>
                   </div>

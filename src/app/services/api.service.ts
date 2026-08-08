@@ -61,7 +61,7 @@ export class ApiService {
   companyInfo = signal({
     name: 'Transportes OSCORI S.R.L.',
     tagline: 'Líder en Transporte Pesado Internacional Bolivia - Chile',
-    history: 'Fundada hace más de 15 años en la ciudad de Oruro, Transportes OSCORI nació con el propósito de conectar de manera eficiente las industrias de Bolivia con los principales puertos del Océano Pacífico en Chile. A lo largo de nuestra trayectoria, hemos consolidado una flota de tractocamiones de última generación y un equipo de profesionales altamente comprometidos.',
+    history: 'Fundada hace más de 15 años en la ciudad de La Paz, Transportes OSCORI nació con el propósito de conectar de manera eficiente las industrias de Bolivia con los principales puertos del Océano Pacífico en Chile. A lo largo de nuestra trayectoria, hemos consolidado una flota de tractocamiones de última generación y un equipo de profesionales altamente comprometidos.',
     mission: 'Brindar servicios de transporte de carga pesada internacional y nacional con el más alto nivel de seguridad, puntualidad y eficiencia tecnológica, garantizando la plena satisfacción de nuestros clientes mediante una gestión transparente y moderna.',
     vision: 'Ser reconocidos para el 2030 como la empresa líder en soluciones logísticas y transporte transfronterizo en la región andina, distinguiéndonos por nuestra innovación tecnológica, flota premium y sustentabilidad operativa.',
     values: [
@@ -71,22 +71,16 @@ export class ApiService {
       { name: 'Integridad', desc: 'Oramos con honestidad y transparencia en cada cruce fronterizo e inspección aduanera.' }
     ],
     team: [
-      { name: 'Ing. Alejandro Oscori', role: 'Gerente General / Fundador', photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&auto=format&fit=crop&q=80' },
-      { name: 'Lic. Claudia Oscori', role: 'Directora de Operaciones Binacionales', photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80' },
-      { name: 'Hugo Choque', role: 'Jefe de Tráfico y Monitoreo GPS', photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80' }
+      { name: 'Lic. Iver Oscori', role: 'Gerente General / Fundador', photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&auto=format&fit=crop&q=80' },
+      { name: 'Lic. Deysi', role: 'Directora de Operaciones Binacionales', photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80' },
+      { name: 'Lic. Franco', role: 'Jefe de Tráfico y Monitoreo GPS', photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80' }
     ]
   });
 
   // Client Logos (infinite carousel data)
   clientLogos = signal<string[]>([
-    'https://cdn.worldvectorlogo.com/logos/volvo-1.svg',
-    'https://cdn.worldvectorlogo.com/logos/scania-1.svg',
-    'https://cdn.worldvectorlogo.com/logos/mercedes-benz-9.svg',
-    'https://cdn.worldvectorlogo.com/logos/maersk.svg',
-    'https://cdn.worldvectorlogo.com/logos/dhl-3.svg',
-    'https://cdn.worldvectorlogo.com/logos/dsv-global-transport-logistics.svg',
-    'https://cdn.worldvectorlogo.com/logos/kuehne-nagel.svg',
-    'https://cdn.worldvectorlogo.com/logos/db-schenker-1.svg'
+    'https://lapapelera.com/wp-content/uploads/2020/10/logo-papelera02.png',
+    'https://www.polloscopacabana.com/lib/pollos-copacabana.svg',
   ]);
 
   // Statistics Signals

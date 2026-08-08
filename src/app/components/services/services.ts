@@ -162,7 +162,7 @@ export class ServicesComponent implements AfterViewInit {
     {
       icon: 'fa-solid fa-file-import',
       title: 'Importación Directa',
-      description: 'Traemos sus insumos, maquinaria y productos terminados desde puertos chilenos (Arica, Iquique, San Antonio) hacia Bolivia con trámites aduaneros optimizados.',
+      description: 'Traemos sus insumos, maquinaria y productos terminados desde puertos chilenos (Arica, Iquique) hacia Bolivia con trámites aduaneros optimizados.',
       accent: 'orange',
       details: ['Desaduanización rápida', 'Enlace directo con puertos chilenos', 'Flota certificada']
     },
@@ -174,7 +174,7 @@ export class ServicesComponent implements AfterViewInit {
       details: ['Logística de puerto chilena', 'Coordinación con navieras', 'Estrictas normas de seguridad']
     },
     {
-      icon: 'fa-solid fa-truck-container',
+      icon: 'fa-solid fa-truck',
       title: 'Transporte en Tráiler',
       description: 'Contamos con una moderna flota de tractocamiones y semirremolques adaptados para carga contenerizada, granel, sobredimensionada y carga consolidada.',
       accent: 'orange',

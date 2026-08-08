@@ -102,7 +102,7 @@ interface TrackingData {
               <!-- Summary Header -->
               <div class="row align-items-center g-3 border-bottom border-glass pb-4 mb-4">
                 <div class="col-md-6">
-                  <span class="small text-muted d-block">CÓDIGO DE SEGUIMIENTO</span>
+                  <span class="small text-neon-blue d-block">CÓDIGO DE SEGUIMIENTO</span>
                   <h3 class="text-white fw-bold mb-0 text-neon-blue">{{ resultData.code }}</h3>
                 </div>
                 <div class="col-md-6 text-md-end">
@@ -116,20 +116,20 @@ interface TrackingData {
               <!-- General Logistics details -->
               <div class="row g-4 mb-4 text-start">
                 <div class="col-sm-6 col-md-3">
-                  <span class="small text-muted d-block">ORIGEN</span>
+                  <span class="small text-neon-blue d-block">ORIGEN</span>
                   <strong class="text-white small">{{ resultData.origin }}</strong>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                  <span class="small text-muted d-block">DESTINO</span>
+                  <span class="small text-neon-blue d-block">DESTINO</span>
                   <strong class="text-white small">{{ resultData.destination }}</strong>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                  <span class="small text-muted d-block">TRACTOCAMIÓN / CHOFER</span>
+                  <span class="small text-neon-blue d-block">TRACTOCAMIÓN / CHOFER</span>
                   <span class="text-white small d-block">{{ resultData.plate }}</span>
-                  <span class="text-muted x-small d-block">{{ resultData.driver }}</span>
+                  <span class="x-small d-block">{{ resultData.driver }}</span>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                  <span class="small text-muted d-block">FECHA EST. / ENTREGA</span>
+                  <span class="small text-neon-blue d-block">FECHA EST. / ENTREGA</span>
                   <strong class="text-neon-orange small">{{ resultData.eta }}</strong>
                 </div>
               </div>

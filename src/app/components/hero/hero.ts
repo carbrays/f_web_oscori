@@ -19,9 +19,9 @@ import * as THREE from 'three';
       <!-- Foreground HD Trailer Overlay (OSCORI Premium Truck) -->
       <div class="truck-foreground-wrap position-absolute bottom-0 end-0 z-2 pe-md-5 pb-3">
         <img 
-          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1000&auto=format&fit=crop&q=80" 
+          src="camiones.png" 
           alt="Transportes OSCORI Trailer" 
-          class="truck-foreground img-fluid opacity-0"
+          class="truck-foreground img-fluid gsap-hidden"
           id="hero-truck-img"
         >
       </div>
@@ -29,20 +29,20 @@ import * as THREE from 'three';
       <div class="container position-relative z-3 text-start">
         <div class="row">
           <div class="col-lg-8">
-            <span class="badge-premium mb-3 d-inline-block opacity-0" id="hero-badge">
+            <span class="badge-premium mb-3 d-inline-block gsap-hidden" id="hero-badge">
               <i class="fa-solid fa-earth-americas text-neon-blue me-2"></i>LOGÍSTICA TRANSFRONTERIZA PREMIUM
             </span>
             
-            <h1 class="hero-title mb-4 opacity-0" id="hero-main-title">
+            <h1 class="hero-title mb-4 gsap-hidden" id="hero-main-title">
               Potencia y Precisión <br>
               de <span class="text-gradient-blue">Bolivia a Chile</span>
             </h1>
             
-            <p class="hero-subtitle mb-5 opacity-0" id="hero-subtitle">
+            <p class="hero-subtitle mb-5 gsap-hidden" id="hero-subtitle">
               <span>{{ typedText }}</span><span class="typing-cursor">|</span>
             </p>
             
-            <div class="d-flex flex-wrap gap-3 opacity-0" id="hero-ctas">
+            <div class="d-flex flex-wrap gap-3 gsap-hidden" id="hero-ctas">
               <!-- Redirects to internal pages using Angular routerLink -->
               <a routerLink="/contacto" class="btn-neon-orange d-flex align-items-center decoration-none">
                 <i class="fa-solid fa-file-invoice-dollar me-2"></i>Solicitar Cotización
@@ -56,7 +56,7 @@ import * as THREE from 'three';
       </div>
       
       <!-- Bottom highlights card -->
-      <div class="container position-absolute bottom-0 start-50 translate-middle-x z-3 d-none d-lg-block mb-4 opacity-0" id="hero-highlights">
+      <div class="container position-absolute bottom-0 start-50 translate-middle-x z-3 d-none d-lg-block mb-4 gsap-hidden" id="hero-highlights">
         <div class="row justify-content-center w-100">
           <div class="col-12 col-xl-10">
             <div class="glass-panel p-3 d-flex justify-content-around text-center border-neon-blue-glow">
@@ -64,7 +64,7 @@ import * as THREE from 'three';
                 <div class="icon-wrap-neon blue"><i class="fa-solid fa-truck-moving"></i></div>
                 <div class="text-start">
                   <h6 class="mb-0 fw-bold text-white small">Flota de Tractocamiones</h6>
-                  <p class="mb-0 text-muted x-small">Unidades Volvo y Scania de última generación</p>
+                  <p class="mb-0 x-small">Unidades Volvo y Scania de última generación</p>
                 </div>
               </div>
               <div class="vr bg-secondary opacity-25"></div>
@@ -72,7 +72,7 @@ import * as THREE from 'three';
                 <div class="icon-wrap-neon blue"><i class="fa-solid fa-satellite-dish"></i></div>
                 <div class="text-start">
                   <h6 class="mb-0 fw-bold text-white small">Monitoreo Satelital</h6>
-                  <p class="mb-0 text-muted x-small">Rastreo GPS en tiempo real y alertas continuas</p>
+                  <p class="mb-0 x-small">Rastreo GPS en tiempo real y alertas continuas</p>
                 </div>
               </div>
               <div class="vr bg-secondary opacity-25"></div>
@@ -80,7 +80,7 @@ import * as THREE from 'three';
                 <div class="icon-wrap-neon blue"><i class="fa-solid fa-route"></i></div>
                 <div class="text-start">
                   <h6 class="mb-0 fw-bold text-white small">Corredores del Pacífico</h6>
-                  <p class="mb-0 text-muted x-small">Conexión directa Arica/Iquique con Bolivia</p>
+                  <p class="mb-0 x-small">Conexión directa Arica/Iquique con Bolivia</p>
                 </div>
               </div>
             </div>
@@ -189,6 +189,7 @@ import * as THREE from 'three';
     .truck-foreground-wrap {
       max-width: 45%;
       pointer-events: none;
+      bottom: 100px !important;
     }
     .truck-foreground {
       filter: drop-shadow(0 10px 30px rgba(0,0,0,0.8)) contrast(1.1);
@@ -222,6 +223,9 @@ import * as THREE from 'three';
         max-width: 75%;
         opacity: 0.3;
       }
+    }
+    .gsap-hidden {
+      opacity: 0;
     }
   `]
 })

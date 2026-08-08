@@ -59,7 +59,7 @@ import * as L from 'leaflet';
             <div class="glass-panel p-5 text-center">
               <div class="truck-spin mb-4"><i class="fa-solid fa-truck-moving text-neon-blue"></i></div>
               <h5 class="text-white">Conectando con transpondedor satelital...</h5>
-              <p class="text-muted small mb-0">Localizando señal GPS en fronteras andinas.</p>
+              <p class="small mb-0">Localizando señal GPS en fronteras andinas.</p>
             </div>
           </div>
 
@@ -82,7 +82,7 @@ import * as L from 'leaflet';
                 <div class="glass-panel p-4 h-100 border-glass">
                   <!-- Header details -->
                   <div class="border-bottom border-glass pb-3 mb-4">
-                    <span class="text-muted x-small d-block">CÓDIGO DE TRÁNSITO</span>
+                    <span class="x-small d-block">CÓDIGO DE TRÁNSITO</span>
                     <h3 class="text-neon-blue fw-bold mb-2">{{ trackingResult()!.code }}</h3>
                     <span class="badge" [ngClass]="trackingResult()!.currentStatus.includes('Entregada') ? 'badge-delivered' : 'badge-transit'">
                       <i class="fa-solid me-1" [ngClass]="trackingResult()!.currentStatus.includes('Entregada') ? 'fa-circle-check' : 'fa-truck-moving'"></i>
@@ -93,19 +93,19 @@ import * as L from 'leaflet';
                   <!-- General Info Grid -->
                   <div class="row g-3 mb-4">
                     <div class="col-6">
-                      <span class="text-muted d-block x-small">ORIGEN</span>
+                      <span class="text-neon-blue d-block x-small">ORIGEN</span>
                       <strong class="text-white small">{{ trackingResult()!.origin }}</strong>
                     </div>
                     <div class="col-6">
-                      <span class="text-muted d-block x-small">DESTINO</span>
+                      <span class="text-neon-blue d-block x-small">DESTINO</span>
                       <strong class="text-white small">{{ trackingResult()!.destination }}</strong>
                     </div>
                     <div class="col-6">
-                      <span class="text-muted d-block x-small">TRACTOCAMIÓN / PLACA</span>
+                      <span class="text-neon-blue d-block x-small">TRACTOCAMIÓN / PLACA</span>
                       <strong class="text-white small">{{ trackingResult()!.plate }}</strong>
                     </div>
                     <div class="col-6">
-                      <span class="text-muted d-block x-small">ETA ESTIMADA</span>
+                      <span class="text-neon-blue d-block x-small">ETA ESTIMADA</span>
                       <strong class="text-neon-orange small">{{ trackingResult()!.eta }}</strong>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ import * as L from 'leaflet';
                   <div class="driver-box p-3 glass-panel border-glass mb-4 d-flex align-items-center gap-3" *ngIf="trackingResult()!.driver">
                     <img [src]="trackingResult()!.driverPhoto" [alt]="trackingResult()!.driver" class="rounded-circle driver-photo border border-glass">
                     <div>
-                      <span class="text-muted d-block x-small">CONDUCTOR ASIGNADO</span>
+                      <span class="text-neon-blue d-block x-small">CONDUCTOR ASIGNADO</span>
                       <strong class="text-white small">{{ trackingResult()!.driver }}</strong>
                       <span class="d-block text-secondary x-small">Certificación de Carga Pesada Binacional</span>
                     </div>
@@ -136,7 +136,7 @@ import * as L from 'leaflet';
                       
                       <div class="ms-3">
                         <h6 class="text-white fw-bold mb-0 small" [class.text-neon-orange]="step.status === 'active'">{{ step.title }}</h6>
-                        <span class="x-small text-muted d-block">{{ step.time }}</span>
+                        <span class="x-small text-neon-blue d-block">{{ step.time }}</span>
                         <p class="text-secondary x-small mb-0">{{ step.location }}</p>
                       </div>
                     </div>

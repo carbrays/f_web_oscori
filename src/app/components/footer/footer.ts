@@ -27,9 +27,9 @@ import { RouterLink } from '@angular/router';
               Especialistas en la logística y el transporte terrestre internacional de carga pesada entre Bolivia y Chile. Conectando industrias y superando fronteras con absoluta seguridad y puntualidad.
             </p>
             <div class="social-links d-flex gap-3">
-              <a href="https://facebook.com" target="_blank" class="social-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100057627541697" target="_blank" class="social-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
               <a href="https://instagram.com" target="_blank" class="social-btn instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://linkedin.com" target="_blank" class="social-btn linkedin" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.tiktok.com/@iveroscorichambi?_r=1&_t=ZS-98hvghUrATF" target="_blank" class="social-btn tiktok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
             </div>
           </div>
 

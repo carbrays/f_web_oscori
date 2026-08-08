@@ -37,7 +37,7 @@
   /* Text */
   --text-primary: #FFFFFF;
   --text-secondary: #E2E8F0;
-  --text-muted: #94A3B8;
+  --text-muted: #949db8;
   
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -148,7 +148,7 @@ body {
 
 /* Animated Buttons */
 .btn-neon-orange {
-  background: linear-gradient(135deg, var(--neon-orange) 0%, #ff4b00 100%);
+  background: linear-gradient(135deg, var(--neon-orange) 0%, #ff5e00 100%);
   color: white;
   border: none;
   border-radius: 50px;
